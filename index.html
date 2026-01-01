@@ -116,9 +116,9 @@
 <body>
 
 <div id="datetime"></div>
-<div>
-  👁️ Visitors: <span id="visitCount">0</span>
-</div>
+	
+<div>Visitors: <span id="visit-count">Loading…</span></div>
+	
 <h1>Knowledge & Resources</h1>
 
 <input
@@ -439,14 +439,26 @@ function updateDateTime() {
 updateDateTime();
 setInterval(updateDateTime, 1000);
 
-fetch('https://api.countapi.xyz/hit/tallydesk.netlify.app/homepage')
-  .then(response => response.json())
-  .then(data => {
-    document.getElementById('visitCount').innerText = data.value;
+
+async function updateCounter() {
+  const slug = window.location.pathname;
+
+  const res = await fetch("/.netlify/functions/visit-counter", {
+    method: "POST",
+    headers: {"Content-Type": "application/json"},
+    body: JSON.stringify({ slug })
   });
+
+  const data = await res.json();
+  document.getElementById("visit-count").textContent = data.count;
+}
+
+updateCounter();
+
 
 
 </script>
 
 </body>
 </html>
+
