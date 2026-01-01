@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Knowledge & Resources</title>
+
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 16px;
+        background: #ffffff;
+        color: #333;
+    }
+
+    h1 {
+        margin-bottom: 16px;
+        font-size: 22px;
+    }
+
+    input {
+        width: 100%;
+        padding: 14px;
+        font-size: 16px;
+        margin-bottom: 24px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+    }
+
+    .section {
+        margin-bottom: 32px;
+    }
+
+    .section h2 {
+        background: #f2f2f2;
+        padding: 12px;
+        margin-bottom: 12px;
+        border-radius: 6px;
+        font-size: 18px;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    li {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 10px 0;
+        border-bottom: 1px solid #eee;
+        flex-wrap: wrap;
+    }
+
+    li:last-child {
+        border-bottom: none;
+    }
+
+    a {
+        text-decoration: none;
+        color: #0066cc;
+        font-size: 15px;
+        flex: 1 1 auto;
+        min-width: 200px;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+    button {
+        padding: 8px 14px;
+        font-size: 14px;
+        cursor: pointer;
+        border: none;
+        background: #25D366;
+        color: white;
+        border-radius: 6px;
+        white-space: nowrap;
+    }
+
+    button:hover {
+        opacity: 0.9;
+    }
+
+    /* Desktop enhancements */
+    @media (min-width: 768px) {
+        body {
+            max-width: 900px;
+            margin: auto;
+            padding: 24px;
+        }
+
+        h1 {
+            font-size: 26px;
+        }
+
+        .section h2 {
+            font-size: 20px;
+        }
+
+        a {
+            font-size: 16px;
+        }
+    }
+</style>
+</head>
+
+<body>
+
+<div id="datetime"></div>
+<div>
+  👁️ Visitors: <span id="visitCount">0</span>
+</div>
+<h1>Knowledge & Resources</h1>
+
+<input
+    type="text"
+    id="searchBox"
+    placeholder="Type: Enter keywords from main heading press space and then sub-headings"
+    onkeyup="searchContent()"
+>
+
+<!-- VIDEOS -->
+<div class="section" data-heading="videos">
+    <h2>Videos</h2>
+    <ul>
+        <li data-text="how tally drive schedule backup auto">
+            <a href="https://youtu.be/eF-IW2-8W6w?si=ULgP9w7PbP_4irvq" target="_blank">
+                How to Schedule a Backup to TallyDrive
+            </a>
+			<button onclick="sendWhatsApp('https://youtu.be/eF-IW2-8W6w?si=ULgP9w7PbP_4irvq')">
+                Send
+            </button>
+        </li>
+        <li data-text="how tally prime payment online send">
+            <a href="https://www.youtube.com/watch?v=lSNTBYWX00s" target="_blank">
+                GST Filing – Demo
+            </a>
+			<button onclick="sendWhatsApp('https://www.youtube.com/watch?v=lSNTBYWX00s')">
+                Send
+            </button>
+        </li>
+    </ul>
+</div>
+
+<!-- MARKETING MATERIALS -->
+<div class="section" data-heading="marketing materials">
+    <h2>Marketing Materials</h2>
+    <ul>
+        <li data-text="tally prime release data sheet list feature complete full 7">
+            <a href="https://drive.google.com/file/d/1G6o1Q9uVLVQ2Hk60Mnw_6UMTlIib9NiP/view?usp=sharing" target="_blank">
+                TallyPrime 7 Data Sheet
+            </a>
+			<button onclick="sendWhatsApp('https://drive.google.com/file/d/1G6o1Q9uVLVQ2Hk60Mnw_6UMTlIib9NiP/view?usp=sharing')">
+                Send
+            </button>
+        </li>
+        <li data-text="tally prime release one pager 7">
+            <a href="https://drive.google.com/file/d/1Is03Dk04p4lWZ4Y8dluFkZMn5tHvZHvi/view?usp=sharing" target="_blank">
+                TallyPrime 7 One Pager
+            </a>
+			<button onclick="sendWhatsApp('https://drive.google.com/file/d/1Is03Dk04p4lWZ4Y8dluFkZMn5tHvZHvi/view?usp=sharing')">
+                Send
+            </button>
+        </li>
+		<li data-text="release migration cue card erp to prime">
+            <a href="https://drive.google.com/file/d/1yEBizmbNm_BaLV3ndGVkYKQ5-c63Dv-J/view?usp=sharing" target="_blank">
+                Release Migration Cue Card
+            </a>
+			<button onclick="sendWhatsApp('https://drive.google.com/file/d/1yEBizmbNm_BaLV3ndGVkYKQ5-c63Dv-J/view?usp=sharing')">
+                Send
+            </button>
+        </li>
+		<li data-text="connected business infographics round circle wheel">
+            <a href="https://drive.google.com/file/d/1YjzXGri8f0eTtavWTIdDW77y6l1eKK-W/view?usp=sharing" target="_blank">
+                Connected Business Infographic (Wheel)
+            </a>
+			<button onclick="sendWhatsApp('https://drive.google.com/file/d/1YjzXGri8f0eTtavWTIdDW77y6l1eKK-W/view?usp=sharing')">
+                Send
+            </button>
+        </li>
+		<li data-text="release connected business infographics table wise feature">
+            <a href="https://drive.google.com/file/d/1rSnAh4XmITWEWy5SoCS4c7_-iBF9ia70/view?usp=sharing" target="_blank">
+                Release and Feature Comparison
+            </a>
+			<button onclick="sendWhatsApp('https://drive.google.com/file/d/1rSnAh4XmITWEWy5SoCS4c7_-iBF9ia70/view?usp=sharing')">
+                Send
+            </button>
+        </li>
+    </ul>
+</div>
+
+<!-- HELP -->
+<div class="section" data-heading="help">
+    <h2>Help</h2>
+    <ul>
+        <li data-text="tally prime release note 7">
+            <a href="https://help.tallysolutions.com/release-notes-tallyprime-7-0/" target="_blank">
+                TallyPrime 7 Release Note
+            </a>
+			<button onclick="sendWhatsApp('https://help.tallysolutions.com/release-notes-tallyprime-7-0/')">
+                Send
+            </button>
+        </li>
+        <li data-text="installation steps">
+            <a href="https://example.com/install-help" target="_blank">
+                Installation Steps
+            </a>
+        </li>
+    </ul>
+</div>
+
+<!-- INSTANT DEMO -->
+<div class="section" data-heading="instant demo">
+    <h2>Instant Demo</h2>
+    <ul>
+        <li data-text="connected payments">
+            <a href="https://tallysolutions.com/tally-prime-demo/connected-payments/" target="_blank">
+                Connected Payments
+            </a>
+			<button onclick="sendWhatsApp('https://tallysolutions.com/tally-prime-demo/connected-payments/')">
+                Send
+            </button>
+        </li>
+        <li data-text="tally drive cloud backup">
+            <a href="https://tallysolutions.com/tally-prime-demo/backup/" target="_blank">
+                Tally Drive Cloud Backup
+            </a>
+			<button onclick="sendWhatsApp('https://tallysolutions.com/tally-prime-demo/backup/')">
+                Send
+            </button>
+        </li>
+        <li data-text="bharat connect business">
+            <a href="https://tallysolutions.com/tally-prime-demo/bharat-connect-demo/" target="_blank">
+                Bharat Connect for Business
+            </a>
+			<button onclick="sendWhatsApp('https://tallysolutions.com/tally-prime-demo/bharat-connect-demo/')">
+                Send
+            </button>
+        </li>
+        <li data-text="invoice management system ims">
+            <a href="https://tallysolutions.com/tally-prime-demo/tallyprime-invoice-management-system-demo/" target="_blank">
+                Invoice Management System (IMS)
+            </a>
+			<button onclick="sendWhatsApp('https://tallysolutions.com/tally-prime-demo/tallyprime-invoice-management-system-demo/')">
+                Send
+            </button>
+        </li>
+		<li data-text="connected banking">
+            <a href="https://tallysolutions.com/tally-prime-demo/connected-banking/" target="_blank">
+                Connected Banking
+            </a>
+			<button onclick="sendWhatsApp('https://tallysolutions.com/tally-prime-demo/connected-banking/')">
+                Send
+            </button>
+        </li>
+		<li data-text="enhanced bank reconciliation">
+            <a href="https://tallysolutions.com/tally-prime-demo/bank-recon/" target="_blank">
+                Enhanced Bank Reconciliation
+            </a>
+			<button onclick="sendWhatsApp('https://tallysolutions.com/tally-prime-demo/bank-recon/')">
+                Send
+            </button>
+        </li>		
+        <li data-text="automated voucher creation">
+            <a href="https://tallysolutions.com/tally-prime-demo/voucher-creation/" target="_blank">
+                Automated Voucher Creation
+            </a>
+			<button onclick="sendWhatsApp('https://tallysolutions.com/tally-prime-demo/voucher-creation/')">
+                Send
+            </button>
+        </li>
+		<li data-text="connected gst return">
+            <a href="https://tallysolutions.com/tally-prime-demo/uploading-and-filing-gstr-1/" target="_blank">
+                Connected GST Return
+            </a>
+			<button onclick="sendWhatsApp('https://tallysolutions.com/tally-prime-demo/uploading-and-filing-gstr-1/')">
+                Send
+            </button>
+        </li>
+		<li data-text="inventory reports">
+            <a href="https://tallysolutions.com/tally-prime-demo/inventory-reports/" target="_blank">
+                Inventory Reports
+            </a>
+			<button onclick="sendWhatsApp('https://tallysolutions.com/tally-prime-demo/inventory-reports/')">
+                Send
+            </button>
+        </li>		
+		<li data-text="financial statements add on for nces">
+            <a href="https://tallysolutions.com/tally-prime-demo/financial-statement-non-corporate-entities/" target="_blank">
+                Financial Statements Add-on for NCEs
+            </a>
+			<button onclick="sendWhatsApp('https://tallysolutions.com/tally-prime-demo/financial-statement-non-corporate-entities/')">
+                Send
+            </button>
+        </li>
+		<li data-text="gstr reconciliation">
+            <a href="https://tallysolutions.com/tally-prime-demo/gst-returns-reconciliation/" target="_blank">
+                GSTR Reconciliation
+            </a>
+			<button onclick="sendWhatsApp('https://tallysolutions.com/tally-prime-demo/gst-returns-reconciliation/')">
+                Send
+            </button>
+        </li>
+		<li data-text="tally prime cloud access experience">
+            <a href="https://tallysolutions.com/tally-prime-demo/tallyprime-cloud-access-demo/" target="_blank">
+                TallyPrime Cloud Access - Experience
+            </a>
+			<button onclick="sendWhatsApp('https://tallysolutions.com/tally-prime-demo/tallyprime-cloud-access-demo/')">
+                Send
+            </button>
+        </li>		
+        <li data-text="e invoice">
+            <a href="https://tallysolutions.com/tally-prime-demo/generate-e-invoice/" target="_blank">
+                e-Invoice
+            </a>
+			<button onclick="sendWhatsApp('https://tallysolutions.com/tally-prime-demo/generate-e-invoice/')">
+                Send
+            </button>
+        </li>
+		<li data-text="invoice personalisation">
+            <a href="https://tallysolutions.com/tally-prime-demo/invoice-personalization/" target="_blank">
+                Invoice Personalisation
+            </a>
+			<button onclick="sendWhatsApp('https://tallysolutions.com/tally-prime-demo/invoice-personalization/')">
+                Send
+            </button>
+        </li>
+		<li data-text="excel import">
+            <a href="https://tallysolutions.com/tally-prime-demo/excel-import/" target="_blank">
+                Excel Import
+            </a>
+			<button onclick="sendWhatsApp('https://tallysolutions.com/tally-prime-demo/excel-import/')">
+                Send
+            </button>
+        </li>		
+		<li data-text="report dashboard">
+            <a href="https://tallysolutions.com/tally-prime-demo/dashboard/" target="_blank">
+                Report Dashboard
+            </a>
+			<button onclick="sendWhatsApp('https://tallysolutions.com/tally-prime-demo/dashboard/')">
+                Send
+            </button>
+        </li>		
+        <li data-text="manufacturing industry">
+            <a href="https://tallysolutions.com/tally-prime-demo/manufacturing/" target="_blank">
+                Manufacturing
+            </a>
+			<button onclick="sendWhatsApp('https://tallysolutions.com/tally-prime-demo/manufacturing/')">
+                Send
+            </button>
+        </li>
+		<li data-text="tally prime with whatsapp waba">
+            <a href="https://tallysolutions.com/tally-prime-demo/tallyprime-with-whatsapp/" target="_blank">
+                TallyPrime with WhatsApp
+            </a>
+			<button onclick="sendWhatsApp('https://tallysolutions.com/tally-prime-demo/tallyprime-with-whatsapp/')">
+                Send
+            </button>
+        </li>
+		<li data-text="invoice management system portal ims">
+            <a href="https://tallysolutions.com/tally-prime-demo/invoice-management-system-demo/" target="_blank">
+                Invoice Management System Portal
+            </a>
+			<button onclick="sendWhatsApp('https://tallysolutions.com/tally-prime-demo/invoice-management-system-demo/')">
+                Send
+            </button>
+        </li>
+    </ul>
+</div>
+
+<script>
+function searchContent() {
+    const input = document.getElementById("searchBox").value
+        .toLowerCase()
+        .trim();
+
+    const words = input.split(/\s+/);
+    const headingWord = words[0] || "";
+    const subWords = words.slice(1);
+
+    document.querySelectorAll(".section").forEach(section => {
+        const heading = section.dataset.heading.toLowerCase();
+        const items = section.querySelectorAll("li");
+        let visible = false;
+
+        const headingMatch = headingWord === "" || heading.includes(headingWord);
+
+        items.forEach(item => {
+            const text = item.dataset.text.toLowerCase();
+            const subMatch = subWords.every(w => text.includes(w));
+
+            if (headingMatch && subMatch) {
+                item.style.display = "flex";
+                visible = true;
+            } else {
+                item.style.display = "none";
+            }
+        });
+
+        section.style.display = visible ? "block" : "none";
+    });
+}
+
+function sendWhatsApp(link) {
+    let number = prompt("Enter mobile number (India +91):");
+    if (!number) return;
+
+    number = number.replace(/\D/g, "");
+    if (!number.startsWith("91")) number = "91" + number;
+
+    const url = `https://wa.me/${number}?text=${encodeURIComponent(link)}`;
+    <!--window.open(url, "_blank");-->
+	window.location.href = url;
+}
+
+function updateDateTime() {
+  const now = new Date();
+  const options = {
+    weekday: 'long',
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+    hour: '2-digit',
+    minute: '2-digit',
+    second: '2-digit'
+  };
+  document.getElementById("datetime").innerText =
+    "📅 " + now.toLocaleDateString('en-IN', options);
+}
+updateDateTime();
+setInterval(updateDateTime, 1000);
+
+fetch('https://api.countapi.xyz/hit/tallydesk.netlify.app/homepage')
+  .then(response => response.json())
+  .then(data => {
+    document.getElementById('visitCount').innerText = data.value;
+  });
+
+
+</script>
+
+</body>
+</html>
