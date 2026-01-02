@@ -443,7 +443,7 @@ setInterval(updateDateTime, 1000);
 async function updateCounter() {
   const slug = window.location.pathname;
 
-  const res = await fetch("/.netlify/functions/visit-counter", {
+  const res = await fetch("/api/visit-counter", {
     method: "POST",
     headers: {"Content-Type": "application/json"},
     body: JSON.stringify({ slug })
@@ -461,6 +461,7 @@ updateCounter();
 
 </body>
 </html>
+
 
 
 
