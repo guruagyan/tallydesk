@@ -1,6 +1,6 @@
 import { createClient } from '@supabase/supabase-js';
 
-export default async (request) => {
+export default async function handler(request) => {
   try {
     const SUPABASE_URL = process.env.SUPABASE_URL;
     const SUPABASE_SERVICE_ROLE = process.env.SUPABASE_SERVICE_ROLE;
@@ -35,3 +35,4 @@ export default async (request) => {
     return new Response("Function error", { status: 500 });
   }
 };
+
