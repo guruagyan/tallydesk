@@ -441,26 +441,39 @@ setInterval(updateDateTime, 1000);
 
 
 async function updateCounter() {
-  const slug = window.location.pathname;
+  // Set slug for your page; "home" for homepage
+  const slug = window.location.pathname === "/" ? "home" : window.location.pathname;
 
-  const res = await fetch("/api/visit-counter", {
-    method: "POST",
-    headers: {"Content-Type": "application/json"},
-    body: JSON.stringify({ slug })
-  });
+  try {
+    const res = await fetch("/api/visit-counter", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ slug })
+    });
 
-  const data = await res.json();
-  document.getElementById("visit-count").textContent = data.count;
+    if (!res.ok) {
+      throw new Error(`API returned status ${res.status}`);
+    }
+
+    const data = await res.json();
+
+    // Update the span with the returned count
+    document.getElementById("visit-count").textContent = data.count;
+
+  } catch (err) {
+    console.error("Visit counter error:", err);
+    document.getElementById("visit-count").textContent = "Error";
+  }
 }
 
+// Call the function when page loads
 updateCounter();
-
-
 
 </script>
 
 </body>
 </html>
+
 
 
 
