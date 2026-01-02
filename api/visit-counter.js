@@ -9,37 +9,29 @@ export default async function handler(request) {
       return new Response("Missing environment variables", { status: 500 });
     }
 
-    const supabase = createClient(
-      SUPABASE_URL,
-      SUPABASE_SERVICE_ROLE
-    );
+    const supabase = createClient(SUPABASE_URL, SUPABASE_SERVICE_ROLE);
 
     let slug = "site";
-
     try {
       const body = await request.json();
       if (body?.slug) slug = body.slug;
     } catch (_) {}
 
-    const { data, error } = await supabase.rpc(
-      "increment_page_view",
-      { slug_input: slug }
-    );
+    const { data, error } = await supabase.rpc("increment_page_view", {
+      slug_input: slug
+    });
 
     if (error) {
       console.error("RPC ERROR:", error);
       return new Response("Database error", { status: 500 });
     }
 
-    return new Response(
-      JSON.stringify({ slug, count: data }),
-      {
-        headers: {
-          "Content-Type": "application/json",
-          "Cache-Control": "no-store"
-        }
+    return new Response(JSON.stringify({ slug, count: data }), {
+      headers: {
+        "Content-Type": "application/json",
+        "Cache-Control": "no-store"
       }
-    );
+    });
 
   } catch (err) {
     console.error("FUNCTION ERROR:", err);
